@@ -1,0 +1,68 @@
+User Stories:
+
+*	Account Creation: Here the user will have the ability to register on the flix service, providing us with his primary basic information. This step is mandatory in order to be able to subscribe to any bundle provided by Flix, As the account defines who you are as a person.
+
+*	Bundle Subscription: After having a registered account on Flix platform, user will have to subscribe to any bundle that suits him the most in order to be able to watch the collection of shows and movies that Flix provide.
+
+*	Shows Listing: After successful regestiration and successful bundle subscription and payment, the user will be able to list all the movies and shows we provide in Flix.
+
+*	Shows Searching: Somehow the user might want to search a specific movie or show or even a category, so a searching panel should be available in order to make it easier for the user to get what he/she needs.
+
+*	Canceling Subscription: After sometime, the user may cancell the subscription for any reason, perhaps he don't like our service, our movies and shows, or even he got a better offer on another platform, so he could easily cancel the subscription in order not to be charged in the upcoming recurring due dates.
+
+===========================================================================================
+
+Features:
+
+*	Upload Shows/Movies:
+	-- Tasks ::
+
+		- Create endpoint to recieve the movie raw file.
+		- Compress the file to multiple qualities.
+		- Create a service to notify you after the compression process is done.
+		- Create a panel for proceeding with the file upload process.
+		- Create an endpoint to remove the movie from being listed for the user.
+
+*	Bundles:
+	-- Tasks ::
+
+		- Create endpoint to retrieve the bundles.
+		- Integrate with payment gateways to handle the bundle payment process.
+		- Create daemons to monitor the bundle renewal status.
+
+*	Authentication and Authorization:
+	-- Tasks ::
+
+		- Integrate with popular social media platforms to register and login easily.
+		- Create normal register panel.
+		- Create normal login panel.
+
+*	Browsing:
+	-- Tasks ::
+
+		- Fetch movies based on most watched and ranks.
+		- Prevent fetching watched movies.
+		- Create searching box for requsting specific movie/show.
+
+*	Feedback:
+	-- Tasks ::
+
+		- Create section for feedbacks and recommendations.
+
+
+===========================================================================================
+
+Endpoints:
+
+POST /login
+POST /register
+POST /logout
+GET /bundles
+POST /subscribe
+PUT /movie
+DELETE /movie/{id}
+GET /categories
+GET /movie/{id}
+POST /feedback
+
+
